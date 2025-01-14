@@ -14,7 +14,7 @@ struct ContentView: View {
             CardView()
             CardView()
             CardView()
-        } 
+        }//teste de commit  
         .foregroundColor(.orange)
         .padding()
             
