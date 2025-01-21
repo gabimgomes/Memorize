@@ -10,6 +10,8 @@ import SwiftData
 
 @main
 struct MemorizeApp: App {
+    @StateObject var game = EmojiMemoryGame()
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
             Item.self,
@@ -25,7 +27,7 @@ struct MemorizeApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            EmojiMemoryGameView(viewModel:game)
         }
         .modelContainer(sharedModelContainer)
     }
